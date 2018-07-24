@@ -1,0 +1,13 @@
+﻿  main.cpp
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(57): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(256): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(369): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(370): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(394): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(395): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(408): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(418): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'unsigned __int64'입니다.
+  d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\findpeaks.h(418): note: 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\main.cpp(4): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+d:\visualstudioprojects\findpeaksandrotation\findpeaksandrotation(vs2017)\findpeaksandrotation(vs2017)\main.cpp(23): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  FindPeaksAndRotation(VS2017).vcxproj -> D:\VisualStudioProjects\FindPeaksAndRotation\FindPeaksAndRotation(VS2017)\x64\Debug\FindPeaksAndRotation(VS2017).exe
