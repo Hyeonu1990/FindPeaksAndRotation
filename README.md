@@ -3,7 +3,7 @@ Find Peaks( the Max value in a part of image area) and if input-image is rotated
  
 본래 포렌식 워터마킹 작업 중 일부분입니다.
  
-본래 입력될 이미지는 2차 웨이블릿 변환으로 HH2 영역에 peak값들을 삽입 후 다시 역변환한 이미지입니다.
+본래 될 이미지는 2차 웨이블릿 변환으로 HH2 영역에 peak값들을 삽입 후 다시 역변환한 이미지입니다.
  
 FindPeaks 클래스에서 받을 매개변수 src는
  
