@@ -549,7 +549,7 @@ private:
 
 		for (int i = 0; i < angles.size(); i++)
 		{
-			printf("value : %f, Length : %f, count : %f\n", (*angles_ptr)[0], (*angles_ptr)[1], (*angles_ptr)[2]);
+			if(debug) printf("value : %f, Length : %f, count : %f\n", (*angles_ptr)[0], (*angles_ptr)[1], (*angles_ptr)[2]);
 			if ((i == 0) || (MaxCount < (*angles_ptr)[2]))
 			{
 				MaxValue = (*angles_ptr)[0];
@@ -559,7 +559,7 @@ private:
 
 			angles_ptr++;
 		}
-		printf("MaxValue : %f, MaxLength : %f, MaxCount : %f\n", MaxValue, MaxLength, MaxCount);
+		if(debug) printf("MaxValue : %f, MaxLength : %f, MaxCount : %f\n", MaxValue, MaxLength, MaxCount);
 		float result = MaxValue;
 		lineLength = MaxLength;
 
