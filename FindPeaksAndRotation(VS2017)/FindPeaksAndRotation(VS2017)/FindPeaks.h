@@ -54,14 +54,14 @@ public:
 			imwrite("./image/peaks_lines.png", output);
 		}
 
-		angle = acosf(AnglesMaxValue()) * 180 / CV_PI;
+		angle = -acosf(AnglesMaxValue()) * 180 / CV_PI;
 		if (debug) printf("first angle value : %f\n", angle);
 
 		if (angle == 90.0f || angle == -90.0f) angle = 0;
-		else if (angle >= 135.0f) angle -= 180;
-		else if (angle < 135.0f && angle > 90) angle -= 90;
-		else if (angle > -135.0f && angle < -90) angle += 90;
-		else if (angle <= -135.0f) angle += 180;
+		else if (angle > 135.0f) angle -= 180;
+		else if (angle <= 135.0f && angle > 90) angle -= 90;
+		else if (angle >= -135.0f && angle < -90) angle += 90;
+		else if (angle < -135.0f) angle += 180;
 		//else 
 		if(lineLength != 0)
 			scale = 256 / lineLength; //1;
@@ -513,6 +513,7 @@ private:
 
 		if (angles.size() == 0)
 		{
+			if (length > 256) return;
 			angles.push_back(new float[3]{ value, leng, 0 });
 		}
 		else
@@ -520,12 +521,12 @@ private:
 			for (int i = 0; i < angles.size(); i++)
 			{
 				if ( 
-					((*angles_ptr)[0] <= value + 0.01 || (*angles_ptr)[0] >= value - 0.01) &&
-					((*angles_ptr)[1] <= leng + 1 || (*angles_ptr)[1] >= leng - 1) &&
-					((*angles_ptr)[1] <= 256)
+					((*angles_ptr)[0] <= value + 0.01f && (*angles_ptr)[0] >= value - 0.01f) &&
+					((*angles_ptr)[1] <= leng + 2.0f && (*angles_ptr)[1] >= leng - 2.0f) &&
+					((*angles_ptr)[1] <= 256.0f)
 					)
 				{
-					(*angles_ptr)[2]++;
+					++(*angles_ptr)[2];
 					return;
 				}
 				angles_ptr++;
@@ -548,7 +549,8 @@ private:
 
 		for (int i = 0; i < angles.size(); i++)
 		{
-			if ((i == 0) || (MaxCount < (*angles_ptr)[1]))
+			printf("value : %f, Length : %f, count : %f\n", (*angles_ptr)[0], (*angles_ptr)[1], (*angles_ptr)[2]);
+			if ((i == 0) || (MaxCount < (*angles_ptr)[2]))
 			{
 				MaxValue = (*angles_ptr)[0];
 				MaxLength = (*angles_ptr)[1];
@@ -557,7 +559,7 @@ private:
 
 			angles_ptr++;
 		}
-
+		printf("MaxValue : %f, MaxLength : %f, MaxCount : %f\n", MaxValue, MaxLength, MaxCount);
 		float result = MaxValue;
 		lineLength = MaxLength;
 
