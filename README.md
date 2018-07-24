@@ -1,9 +1,11 @@
 # FindPeaksAndRotation
 Find Peaks( the Max value in a part of image area) and if input-image is rotated, It's recovered.
+
 This project is based on OpenCV 3.4.1 (https://opencv.org/releases.html)
 
 Opencv Lib Location - C:\opencv (When you install OpenCV as WinPack, Extract to C:)
  
+  
 본래 포렌식 워터마킹 작업 중 일부분입니다.
  
 본래 사용될 이미지는 2차 웨이블릿 변환으로 HH2 영역에 peak값들을 삽입 후 다시 역변환한 이미지입니다.
