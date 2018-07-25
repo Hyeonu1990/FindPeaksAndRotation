@@ -60,6 +60,8 @@ public:
 		if (angle == 90.0f || angle == -90.0f) angle = 0;
 		else if (angle > 135.0f) angle -= 180;
 		else if (angle <= 135.0f && angle > 90) angle -= 90;
+		else if (angle < 90.0f && angle > 45) angle = 90 - angle;
+		else if (angle > -90.0f && angle < -45) angle = -90 - angle;
 		else if (angle >= -135.0f && angle < -90) angle += 90;
 		else if (angle < -135.0f) angle += 180;
 		//else 
@@ -458,7 +460,7 @@ private:
 		//VectorNomalize(p3);
 		Point2f std = Point2f(1, 0);
 
-		float inner = -pnorm.x * std.x + -pnorm.y * std.y;
+		float inner = pnorm.x * std.x * ((pnorm.y > 0) ? -1 : 1);
 
 		//return inner;
 

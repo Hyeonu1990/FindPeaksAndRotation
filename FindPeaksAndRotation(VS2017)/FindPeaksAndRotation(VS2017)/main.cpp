@@ -14,9 +14,9 @@ void main()
 	/*
 	//rotation
 	input = imread("./image/dodo_peaks_added.png");
-	matrix = getRotationMatrix2D(Point2f(input.cols / 2, input.rows / 2), 20, 1);
+	matrix = getRotationMatrix2D(Point2f(input.cols / 2, input.rows / 2), -30, 1);
 	warpAffine(input, output, matrix, Size(input.cols, input.rows));
-	imwrite("./image/dodo_peaks_added_rotate_20.png", output);
+	imwrite("./image/dodo_peaks_added_rotate_-30.png", output);
 	*/
 
 	input = imread("./image/dodo_peaks_added_rotate_20.png");
